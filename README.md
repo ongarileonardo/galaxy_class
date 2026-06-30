@@ -8,7 +8,9 @@ The goal is to train a model that can predict galaxy classes from images, compar
 
 ## Usage
 
-package versions [...]
+Dependencies can be found in the `requirements.txt` file. To install, run `pip install -r requirements.txt` with a Python environment between 3.10 and 3.13.
+
+It is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU.
 
 ## Key Tasks
 
@@ -27,3 +29,5 @@ package versions [...]
 ## References
 
 [1] Dieleman, Willett, and Dambre, "Rotation-invariant convolutional neural networks for galaxy morphology prediction"
+
+[2] LEUNG, Henry W.; BOVY, Jo. Deep learning of multi-element abundances from high-resolution spectroscopic data. Monthly Notices of the Royal Astronomical Society, 2019, 483.3: 3255-3277.
