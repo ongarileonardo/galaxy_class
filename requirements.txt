@@ -19,6 +19,7 @@ jupyterlab>=4.0
 # ===== Deep learning backend (IMPORTANT: keep consistent) =====
 tensorflow==2.18.0
 keras==3.6.0
+umap-learn
 
 # ===== Optional but commonly used =====
 torch>=2.5.0
