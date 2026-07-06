@@ -1,19 +1,8 @@
-# ===== Core scientific stack =====
-setuptools<82
-numpy
+numpy<2.1,>=1.26
 scipy
 matplotlib
 scikit-learn
-
-# ===== Jupyter =====
-ipython
-ipykernel
 jupyterlab
-
-# ===== Deep learning backend (IMPORTANT: keep consistent) =====
 tensorflow==2.18.0
 keras==3.6.0
-tf-keras==2.18.0
-
-# ===== astroNN (latest from GitHub) =====
 git+https://github.com/henrysky/astroNN.git
