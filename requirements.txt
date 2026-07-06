@@ -17,6 +17,7 @@ ipykernel
 jupyterlab
 
 # ===== Deep learning backend (IMPORTANT: keep consistent) =====
+ml_dtypes>=0.5
 tensorflow==2.18.0
 keras==3.6.0
 umap-learn
