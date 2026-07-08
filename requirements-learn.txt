@@ -3,4 +3,5 @@ scipy
 matplotlib
 scikit-learn
 jupyterlab
-tensorflow[and-cuda]==2.15.*
+tensorflow==2.15.*; sys_platform != "linux"
+tensorflow[and-cuda]==2.15.*; sys_platform == "linux"

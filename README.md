@@ -13,11 +13,17 @@ Dependencies for EDA and Visualization can be found in the `requirements.txt` fi
 ### Training
 For network training, it is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU access.
 
-Recommended: use anaconda or miniconda to create a virtual environment
+**Recommended**: use anaconda or miniconda to create a virtual environment
 
-`> conda create -n myenv python=3.11` 
-`> conda activate myenv` 
-`(myenv) > pip install -r requirements-learn.txt` 
+```bash
+       > conda create -n myenv python=3.11
+       > conda activate myenv
+(myenv)> pip install -r requirements-learn.txt
+```
+
+The default requirements-learn.txt file will install tensorflow 2.15 with CUDA support only for Linux. 
+
+If you are using a different OS, you will need to check your system requirements and install the appropriate version of tensorflow and CUDA/GPU support, otherwise the training will use the CPU only.
 
 To monitor the GPU activity, run the following command 
 `watch -n 1 nvidia-smi` 
