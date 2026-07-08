@@ -8,9 +8,19 @@ The goal is to train a model that can predict galaxy classes from images, compar
 
 ## Usage
 
-Dependencies can be found in the `requirements.txt` file. To install, run `pip install -r requirements.txt` with a Python environment between 3.10 and 3.13.
+Dependencies for EDA and Visualization can be found in the `requirements.txt` file. To install, run `pip install -r requirements.txt` with a Python environment between 3.10 and 3.13.
 
-It is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU.
+### Training
+For network training, it is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU access.
+
+Recommended: use anaconda or miniconda to create a virtual environment
+
+`> conda create -n myenv python=3.11` 
+`> conda activate myenv` 
+`(myenv) > pip install -r requirements-learn.txt` 
+
+To monitor the GPU activity, run the following command 
+`watch -n 1 nvidia-smi` 
 
 ## Key Tasks
 
@@ -25,6 +35,10 @@ It is strictly recommended to use a Colab environment or a Jupyter Lab environme
 - Convert images to grayscale to reduce input size
 - Consider cropping the image center to remove irrelevant background
 - Use a GPU if available to speed up training
+
+## Notes
+The dataset used in the EDA and Visualization file is different from the one used in Training notebooks. The reason behind this is that astroNN dependencies conflict with tensorflow and other libraries used for training.
+Without astroNN available, the dataset import is done manually downloading the file from http://astro.utoronto.ca/~bovy/Galaxy10/Galaxy10.h5, instead of loading it with the library command.
 
 ## References
 

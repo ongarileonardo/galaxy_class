@@ -3,6 +3,4 @@ scipy
 matplotlib
 scikit-learn
 jupyterlab
-tensorflow==2.18.0
-keras==3.6.0
-git+https://github.com/henrysky/astroNN.git
+tensorflow[and-cuda]==2.15.*
