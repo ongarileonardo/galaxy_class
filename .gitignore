@@ -4,16 +4,6 @@
 **.xlsx
 **.xls
 
-# all image files
-**.jpg
-**.jpeg
-**.png
-**.gif
-**.bmp
-**.svg
-**.tiff
-**.webp
-
 # virtual environment
 **.venv/
 
