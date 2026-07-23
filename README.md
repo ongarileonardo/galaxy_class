@@ -8,7 +8,7 @@ The goal is to train a model that can predict galaxy classes from images, compar
 
 ## Usage
 
-Dependencies for Galaxy10Learning and Visualization can be found in the `galaxy10-requirements.txt` file. 
+Dependencies for Galaxy10Learning and Visualization can be found in the `galaxy10-requirements.txt` file; for other notebooks, use `user-requirements.txt`. It is recommended to use 2 different virtual environments based on the requirements, to prevent dependencies version mismatch.
 
 ### Training
 For network training, it is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU access.
