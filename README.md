@@ -8,7 +8,7 @@ The goal is to train a model that can predict galaxy classes from images, compar
 
 ## Usage
 
-Dependencies for EDA and Visualization can be found in the `requirements.txt` file. To install, run `pip install -r requirements.txt` with a Python environment between 3.10 and 3.13.
+Dependencies for Galaxy10Learning and Visualization can be found in the `galaxy10-requirements.txt` file. 
 
 ### Training
 For network training, it is strictly recommended to use a Colab environment or a Jupyter Lab environment with a GPU access.
@@ -19,9 +19,10 @@ For network training, it is strictly recommended to use a Colab environment or a
        > conda create -n myenv python=3.11
        > conda activate myenv
 (myenv)> pip install -r requirements-learn.txt
+(myenv)> jupyter lab
 ```
 
-The default requirements-learn.txt file will install tensorflow 2.15 with CUDA support only for Linux. 
+The default user-requirements.txt file will install tensorflow 2.15 with CUDA support only for Linux. 
 
 If you are using a different OS, you will need to check your system requirements and install the appropriate version of tensorflow and CUDA/GPU support, otherwise the training will use the CPU only.
 
@@ -43,8 +44,12 @@ To monitor the GPU activity, run the following command
 - Use a GPU if available to speed up training
 
 ## Notes
-The dataset used in the EDA and Visualization file is different from the one used in Training notebooks. The reason behind this is that astroNN dependencies conflict with tensorflow and other libraries used for training.
-Without astroNN available, the dataset import is done manually downloading the file from http://astro.utoronto.ca/~bovy/Galaxy10/Galaxy10.h5, instead of loading it with the library command.
+The dataset used in the project is the original Galaxy10 SDSS file containing 21,785 RGB images of size 69×69 pixels.
+
+This can be imported manually downloading the file from http://astro.utoronto.ca/~bovy/Galaxy10/Galaxy10.h5, or loading it with the library command `astroNN.datasets.load_galaxy10sdss()`
+
+Two different requirements files are needed to solve the issue with astroNN tensorflow version dependency, that generates a conflict with other packages needed.
+
 
 ## References
 
