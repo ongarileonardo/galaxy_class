@@ -53,6 +53,13 @@ Two different requirements files are needed to solve the issue with astroNN tens
 
 ## References
 
-[1] Dieleman, Willett, and Dambre, "Rotation-invariant convolutional neural networks for galaxy morphology prediction"
+[1] Lintott, C. J.; Schawinski, K.; Slosar, A.; Land, K.; Bamford, S.; Thomas, D.; Raddick, M. J.; Nichol, R. C.; Szalay, A.; Andreescu, D.; Murray, P.; Vandenberg, J. Galaxy Zoo: morphologies derived from visual inspection of galaxies from the Sloan Digital Sky Survey. Monthly Notices of the Royal Astronomical Society, 2008, 389.3: 1179-1189.
 
-[2] LEUNG, Henry W.; BOVY, Jo. Deep learning of multi-element abundances from high-resolution spectroscopic data. Monthly Notices of the Royal Astronomical Society, 2019, 483.3: 3255-3277.
+[2] Lintott, C.; Schawinski, K.; Bamford, S.; Slosar, A.; Land, K.; Thomas, D.; Edmondson, E.; Masters, K.; Nichol, R. C.; Raddick, M. J.; Szalay, A.; Andreescu, D.; Murray, P.; Vandenberg, J. Galaxy Zoo 1: data release of morphological classifications for nearly 900,000 galaxies. Monthly Notices of the Royal Astronomical Society, 2011, 410.1: 166-178.
+
+[3] York, D. G.; Adelman, J.; Anderson, J. E.; Anderson, S. F.; Annis, J.; Bahcall, N. A.; et al. The Sloan Digital Sky Survey: Technical Summary. The Astronomical Journal, 2000, 120.3: 1579-1587.
+
+[4] Dieleman, Willett, and Dambre, "Rotation-invariant convolutional neural networks for galaxy morphology prediction"
+
+[5] LEUNG, Henry W.; BOVY, Jo. Deep learning of multi-element abundances from high-resolution spectroscopic data. Monthly Notices of the Royal Astronomical Society, 2019, 483.3: 3255-3277.
+

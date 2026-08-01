@@ -1,5 +1,7 @@
 \documentclass{beamer}
 \beamertemplatenavigationsymbolsempty
+\usepackage{graphicx}
+\usepackage{subcaption}
 % Theme selection
 \usetheme{Madrid}
 \usecolortheme{default} % You can change this to albatross, beaver, beetle, crane, dolphin, dove, fly, lily, orchid, rose, seagull, seahorse, whale, wolverine
@@ -97,7 +99,7 @@
     
 \end{frame}
 
-\section{Methodology}
+\section{Implementation}
 \begin{frame}{Standard Approach}
     \begin{enumerate}
         \item \textbf{Phase 1:} Import dataset (manually or with galaxy10 SDSS loader)
@@ -172,62 +174,83 @@
 \end{frame}
 
 \section{Results}
-\begin{frame}{Error on Training Set}
+\begin{frame}{Results}
     \begin{itemize}
-        \item 
+    \setlength\itemsep{1em}
+        \item All of the models were trained for 20 epochs
+        \item Categorical cross-entropy loss and accuracy were used as metrics
+        \item Galaxy10CNN was trained with tensorflow 2.18 for astroNN compatibility 
+        \item The user-defined CNNs were trained with tensorflow 2.15 for GPU compatibility
+        \item Gaussian smooth and augmentation were applied on user-defined CNNs only
     \end{itemize}
-    \vspace{0.5cm}
-    
-    % Example of a simple table
-    \begin{table}[]
-        \centering
-        \begin{tabular}{|l|c|r|}
-            \hline
-            \textbf{Phase} & \textbf{Status} & \textbf{Timeline} \\ \hline
-            Phase 1 & \textcolor{green}{Completed} & Q1 2026 \\ \hline
-            Phase 2 & \textcolor{blue}{In Progress} & Q2-Q3 2026 \\ \hline
-            Phase 3 & \textcolor{gray}{Planned} & Q4 2026 \\ \hline
-        \end{tabular}
-        \caption{Current Project Timeline}
-    \end{table}
 \end{frame}
 
-\section{Challenges \& Risks}
-\begin{frame}{Challenges \& Risks}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \textbf{Identified Risks:}
-        \begin{itemize}
-            \item Resource constraints
-            \item Technical dependencies
-            \item Tight deadlines
-        \end{itemize}
-        
-        \column{0.5\textwidth}
-        \textbf{Mitigation Strategies:}
-        \begin{itemize}
-            \item Agile management
-            \item Fallback plans
-            \item Regular stakeholder check-ins
-        \end{itemize}
-    \end{columns}
+\begin{frame}[t]{Loss and Accuracy}
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../learning_results/train_losses.pdf}
+    \label{fig:train_loss}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../learning_results/train_accuracies.pdf}
+    \label{fig:train_acc}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../learning_results/val_losses.pdf}
+    \label{fig:val_loss}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../learning_results/val_accuracies.pdf}
+    \label{fig:val_acc}
+\end{subfigure}
+\caption{\footnotesize Training and validation loss/accuracy curves for raw and augmented datasets.}
+\label{fig:grid}
+\end{figure}
 \end{frame}
 
 \section{Conclusion}
 \begin{frame}{Conclusion \& Future Work}
     \begin{itemize}
-        \item Summarize the main takeaways.
-        \item Discuss the next steps or future enhancements.
-        \item Acknowledge team members, advisors, or sponsors.
+    \setlength\itemsep{1em}
+        \item The user-defined CNNs showed slightly better performance than galaxy10CNN
+        \item To prevent fluctuations, galaxy10CNN decreases the learning rate during training
+        \item Since the data is unbalanced, the models do not capture every feature with the same weight
+        \item Possible future work includes:
+            \begin{itemize}
+                \item Oversampling the minority classes
+                \item Trying different losses and metrics
+            \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+\footnotesize
+\begin{enumerate}
+\item Lintott, C. J.; Schawinski; et al. - Galaxy Zoo: morphologies derived from visual inspection of galaxies from the Sloan Digital Sky Survey. \textit{Monthly Notices of the Royal Astronomical Society}, 2008, 389.3: 1179-1189.
+
+\item Lintott, C.; Schawinski; et al. - Galaxy Zoo 1: data release of morphological classifications for nearly 900,000 galaxies. \textit{Monthly Notices of the Royal Astronomical Society}, 2011, 410.1: 166-178.
+
+\item York, D. G.; Adelman, J.; et al. - The Sloan Digital Sky Survey: Technical Summary. \textit{The Astronomical Journal}, 2000, 120.3: 1579-1587.
+
+\item Dieleman, S.; Willett, K. W.; Dambre, J. Rotation-invariant convolutional neural networks for galaxy morphology prediction. \textit{Monthly Notices of the Royal Astronomical Society}, 2015, 450.2: 1441-1459.
+
+\item Leung, H. W.; Bovy, J. Deep learning of multi-element abundances from high-resolution spectroscopic data. \textit{Monthly Notices of the Royal Astronomical Society}, 2019, 483.3: 3255-3277.
+\end{enumerate}
 \end{frame}
 
 % Q&A Slide
 \begin{frame}
     \centering \Huge
-    \emph{Thank You!} \\
+    \emph{Thank you for your attention !} \\
     \vspace{1cm}
-    \Large Any Questions?
 \end{frame}
 
 \end{document}
