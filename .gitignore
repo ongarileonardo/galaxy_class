@@ -22,3 +22,6 @@ src/RawLearning.py
 src/.ipynb_checkpoints/
 src/Galaxy10.h5
 
+# tex 
+
+tex/**

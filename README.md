@@ -18,7 +18,7 @@ For network training, it is strictly recommended to use a Colab environment or a
 ```bash
        > conda create -n myenv python=3.11
        > conda activate myenv
-(myenv)> pip install -r requirements-learn.txt
+(myenv)> pip install jupyterlab
 (myenv)> jupyter lab
 ```
 
